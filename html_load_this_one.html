@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Additional CSS must be placed after Bootstrap CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="MarkCSScoffeeProject.css">
 </head>
 
 <body>
@@ -25,11 +25,24 @@
     </div>
 </div>
 <br>
-<!--<hr style="width:80%; margin: auto;">-->
 
-<h1 class="text-center fancy-header neonText">Enjoy your <i class="fa-solid fa-mug-hot"></i> with <i
+<h1 class="text-center fancy-header">
+    Enjoy your <i class="fa-solid fa-mug-hot"></i> with <i
         class="fa-brands fa-js-square"></i></h1>
-<h2 class="text-center neonText"> or your <i class="fa-solid fa-cookie-bite"></i> with <i class="fa-brands fa-java"></i></h2>
+<a href="https://www.codeup.com/" target="_blank" style="text-decoration: none;">
+    <button type="button" class="btn btn-secondary mx-auto d-block mb-2" data-bs-toggle="tooltip" data-bs-html="true"
+            title="or call 210-802-7289">
+        Win a Pipboy!
+    </button>
+</a>
+<div>
+    <button id="youtube-button" type="button" class="btn btn-secondary mx-auto d-block mb-2" data-bs-html="true">Vibes</button>
+</div>
+
+<!--<h2 class="text-center neonText"> or your <i class="fa-solid fa-cake-candles"></i> with <i class="fa-brands fa-java"></i>-->
+<h2 class="text-center lightNeonBlue"> or your <i class="fa-solid fa-cake-candles"></i> with <i
+        class="fa-brands fa-java"></i>
+</h2>
 
 <hr style="width:80%; margin: auto;">
 <br>
@@ -38,7 +51,8 @@
 <!--TODO: Review bootstrap spacing utilities for this -->
 <!--    -->
 <!--<main class="container container-fluid p-5">-->
-<div class="modal fade modalbackground" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade modalbackground" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
     <div class="modal-dialog darkgray">
         <div class="modal-content darkgray">
             <div class="modal-header darkgray">
@@ -62,8 +76,10 @@
                 </form>
             </div>
             <div class="modal-footer darkgray">
-                <button type="button" class="btn btn-secondary bg-dark" style="border: black" data-bs-dismiss="modal">Close</button>
-                <button id="send" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Send Custom Coffee
+                <button type="button" class="btn btn-secondary bg-dark" style="border: black" data-bs-dismiss="modal">
+                    Close
+                </button>
+                <button id="send" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Send Coffee Name
                 </button>
             </div>
         </div>
@@ -72,34 +88,39 @@
 <!--</main>-->
 <!--TODO: Keep this, nice and center looks better for now -Mark-->
 <div class="mx-auto d-flex justify-content-center" style="width: 200px;">
-    <button type="button" class="btn btn-primary bg-dark" style="border: black" data-bs-toggle="modal" data-bs-target="#exampleModal"
+    <button type="button" class="btn btn-primary bg-dark" style="border: black" data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
             data-bs-whatever="">Create-a-Coffee
     </button>
 </div>
 
-<!--DIV inside of form is acceptable just not common-->
 
 <div class="d-flex justify-content-center mt-3">
     <section class="d-inline-flex justify-content-center mx-auto" style="width: 80%">
+
         <form class="d-flex">
-            <div class="row d-inline-flex">
-                <div class="col-10">
-                    <label for="roast-selection"></label>
-                    <select id="roast-selection" class="mb-2">
-                        <option>all</option>
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                    <input id="submit" type="submit" value="Search Roasts"/>
+            <div class="row d-inline-flex justify-content-center">
+                <div class="row">
+
+                    <div class="text-center ">
+                        <label for="roast-selection"></label>
+                        <select id="roast-selection" class="mb-2">
+                            <option class="text-center">all</option>
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                        <input class="text-center" id="submit" type="submit" value="Search Roasts"/>
+                        <form>
+                            <input class="text-center" id="searchbar" type="text"
+                                   name="search" placeholder=" Search by flavor...">
+                        </form>
+                    </div>
                 </div>
             </div>
         </form>
         <!--search bar-->
-        <form>
-            <input id="searchbar" type="text"
-                   name="search" placeholder="Search by flavor...">
-        </form>
+
     </section>
 </div>
 
@@ -109,15 +130,21 @@
             <!--    Coffees display here-->
         </section>
     </div>
-
 </div>
-<!--random change to see what happens at 1749-->
-<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/zyS3siSF62M?start=1&autoplay=1&mute=0&enablejsapi=1"-->
-<!--        title="YouTube video player" frameborder="0"-->
-<!--        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"-->
-<!--        allowfullscreen></iframe>-->
+<footer>
+    <div style="height: 7em; width: 100%"></div>
+    <div class="container text-center mb-5">
+        <div class ="row">
+            <div class ="col">
+                <button class="bg-dark text-light" style="border: black" onclick="changeBackgroundImage('assets/terminal_background.png');">Console OG</button>
+                <button class="bg-dark text-light" style="border: black" onclick="changeBackgroundImage('assets/amberRetroTerminal.png');">Console 1</button>
+                <button class="bg-dark text-light" style="border: black" onclick="changeBackgroundImage('assets/blueRetroTerminal.jpeg');">Console 2</button>
+                <button class="bg-dark text-light" style="border: black" onclick="changeBackgroundImage('assets/greenRetroTerminal.png');">Console 3</button>
+            </div>
+        </div>
+    </div>
+</footer>
 
-<script src="js/main.js"></script>
 
 <!--ADDED -->
 <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
@@ -132,5 +159,7 @@
         crossorigin="anonymous"></script>
 <!--Fontawesome-->
 <script src="https://kit.fontawesome.com/774243b4fb.js" crossorigin="anonymous"></script>
+<!--External JS Sheet-->
+<script src="js/main.js"></script>
 </body>
 </html>
